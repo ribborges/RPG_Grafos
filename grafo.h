@@ -38,8 +38,3 @@ int teste ()
     system("COLOR 1F");
     printf ("OK");
 }
-
-int ExitGraph ()
-{
-    exit(0);
-}
