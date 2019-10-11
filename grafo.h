@@ -9,6 +9,7 @@ int MainMenu ()
 {
     int x;
     system("cls");
+    system("COLOR 0F");
     printf("   ______________________________________________________________________________\n");
     printf("   |                                                                            |\n");
     printf("   |                       TRABALHO DE TEORIA DOS GRAFOS!                       |\n");
