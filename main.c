@@ -45,6 +45,7 @@ main () {
         o guerreiro Tom.
     */
     printf("\n Tom era um guerreiro medieval que acabara de retornar de uma guerra vencida, porem sua cidade foi destruida e sua familia foi dizimada, precisava comecar uma nova vida em uma nova cidade: O que fazer primeiro?");
+    printf("\n Este e o seu comeco, ou pelo menos voce foi azarado o suficiente para voltar ate aqui, escolha algo que possa lhe ajudar\n");
 
     /*
         Printa as respostas da questão inicial
@@ -86,21 +87,28 @@ main () {
         printf("\n %s\n", graph.array[v][u].question);
         x = 1;
 
-        for (v = 0; v < 30; v++) {
-            if (graph.array[u][v].exist == 1) {
-                printf("\n %d- %s", x, graph.array[u][v].answer);
-                v1 = (x == 1) ? v : v1;
-                v2 = (x == 2) ? v : v2;
-                v3 = (x == 3) ? v : v3;
-                v4 = (x == 4) ? v : v4;
-                x++;
-            }
+        if (u == 10 || u == 17 || u == 18 || u == 19 || u == 20) {
+            printf("\n\n <<<FIM DE JOGO>>>");
+            fim = 1;
         }
 
-        printf("\n\n     Resposta: ");
-        scanf("%d", &x);
+        else {
+            for (v = 0; v < 30; v++) {
+                if (graph.array[u][v].exist == 1) {
+                    printf("\n %d- %s", x, graph.array[u][v].answer);
+                    v1 = (x == 1) ? v : v1;
+                    v2 = (x == 2) ? v : v2;
+                    v3 = (x == 3) ? v : v3;
+                    v4 = (x == 4) ? v : v4;
+                    x++;
+                }
+            }
+
+            printf("\n\n     Resposta: ");
+            scanf("%d", &x);
+        }
 
     } while (fim == 0);
 
-    //sleep(100000);
+    sleep(100000);
 }
