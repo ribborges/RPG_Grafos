@@ -38,7 +38,7 @@ main () {
         fecha.
     */
     a = mMenu();
-    a == 1 ? printCharacter (); : system("exit");
+    a == 1 ? printCharacter () : system("exit");
 
     /*
         Printa a pergunta inicial sobre
